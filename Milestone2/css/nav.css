@@ -1,0 +1,72 @@
+.nav{
+  display:flex;
+  width:100%;
+}
+.nav div{
+background-color: white;
+}
+
+.Content{
+  display: none;
+  background-color:#eeeeee;
+}
+.nav a{
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  text-align: center;
+}
+
+button {
+  height:70px;
+  width:150px;
+  font-size: 25px;
+  border-style:none;
+  background-color: white;
+}
+
+/* ~ because its a sibling element `*/
+.dropMenu:hover~.Content{
+  display: grid;
+}
+
+/* still displays when the main button is no longer hovered over*/
+.Content:hover{
+  display: grid;
+}
+
+.nav a:hover{
+  background-color: #1c042d;
+  color:white;
+}
+
+button:hover{
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+  background-color: #1c042d;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .nav{
+    flex-direction: column;
+    text-align: left;
+  }
+  .nav div{
+    text-align: center;
+    width:135px;
+  }
+
+  button{
+    font-size: 18px;
+    height:35px;
+  }
+
+}
+
+@media  (max-width: 1024px) and (min-width:500px){
+  .nav{
+    flex-flow:wrap;
+    text-align: left;
+    justify-content: space-around;
+  }
+}
